@@ -17,6 +17,7 @@ The repository contains the following files:
 
 - `BNDopedBiphenylene3.csv` - Contains the configurations of doped biphenylene, along with their corresponding properties (band gaps, permittivities, etc.).
 - `BNDopedBiphenylene_CNN.ipynb` - Jupyter notebook with the code to define, train, and evaluate the CNN model on the dataset.
+- `requirements.txt` - Lists all the Python libraries required to run the code (TensorFlow, Keras, Pandas, etc.).
 
 ## Data Overview
 
@@ -31,6 +32,7 @@ The output data for the model includes the structural, electronic, and optical p
 ## CNN Model Overview
 
 ### Model Architecture:
+
 The CNN model used in this research has the following architecture:
 
 - **Convolutional layers**:
@@ -49,16 +51,32 @@ The CNN model used in this research has the following architecture:
 
 - **Dropout**: A dropout layer with a rate of 0.25 is added after the FC layers to prevent overfitting.
 
-- **Output Layer**: The final output layer uses the **sigmoid** activation function for predictions.
+- **Output Layer**: The final output layer with one neuron uses the **sigmoid** activation function for predictions.
 
 - **Optimizer**: The model uses the **RMSprop** optimizer with a learning rate of **0.0014**.
 
 - **Training Strategy**: The model employs early stopping, halting training when no improvement is observed in the validation loss for 120 consecutive epochs.
 
 ### Hyperparameter Tuning:
+
 Hyperparameters were tuned using KerasTuner's RandomSearch.
 
 ## How to Run the Code
-1. Upload the data file `BNDopedBiphenylene3.csv` to your Google Drive.
-2. Open the Colab notebook `BNDopedBiphenylene_CNN.ipynb` and set the appropriate paths.
-3. Train the model and visualize the results using the provided scripts.
+
+1. If you're using Google Colab, upload both the data file `BNDopedBiphenylene3.csv` and the `requirements.txt` file to your Google Drive. If you're running the code locally, download both files from the GitHub repository.
+2. Open the Colab notebook `BNDopedBiphenylene_CNN.ipynb` if you're using Google Colab. If you're running locally, open the Jupyter Notebook or your preferred Python environment and load the `BNDopedBiphenylene_CNN.ipynb` file.
+3. Set the appropriate paths in the notebook to load the dataset and the requirements file:
+   - For Google Colab, make sure to point to the files in your Google Drive.
+   - For local use, ensure the paths correctly reference the location of the files on your system.
+4. Before running the code, ensure that the required Python libraries are installed:
+    - If you're using Google Colab, you can install the dependencies by running the following command in a code cell:
+      ```bash
+      !pip install -r /path/to/requirements.txt
+      ```
+      Make sure to replace `/path/to/` with the actual path to the `requirements.txt` file in your Google Drive.
+    - If you're running the code locally, navigate to the repository folder in your terminal and install the dependencies by running:
+      ```bash
+      pip install -r requirements.txt
+      ```
+5. Once the dependencies are installed, you can proceed to run the notebook. Train the model and visualize the results using the provided scripts.
+
