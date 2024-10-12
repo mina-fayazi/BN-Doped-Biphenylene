@@ -7,16 +7,16 @@ Published in *Materials Today Communications*, Volume 40, 2024.
 DOI: [10.1016/j.mtcomm.2024.109847](https://doi.org/10.1016/j.mtcomm.2024.109847)  
 [Link to the Paper](https://www.sciencedirect.com/science/article/pii/S2352492824018282)
 
+## Abstract
+
+The research investigates the effects of randomized nitrogen and boron doping on the structural, electronic, and optical properties of biphenylene monolayers using convolutional neural networks (CNNs). A dataset of 35 different doping configurations is used to train the CNN model to predict band gaps and permittivities with high accuracy.
+
 ## Repository Structure
 
 The repository contains the following files:
 
 - `BNDopedBiphenylene3.csv` - Contains the configurations of doped biphenylene, along with their corresponding properties (band gaps, permittivities, etc.).
 - `BNDopedBiphenylene_CNN.ipynb` - Jupyter notebook with the code to define, train, and evaluate the CNN model on the dataset.
-
-## Abstract
-
-The research investigates the effects of randomized nitrogen and boron doping on the structural, electronic, and optical properties of biphenylene monolayers using convolutional neural networks (CNN). A dataset of 35 different doping configurations is used to train the CNN model to predict band gaps and permittivities with high accuracy.
 
 ## Data Overview
 
